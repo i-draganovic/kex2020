@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Course Evaluation</title>
+
+        <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <div id="surveyWrapper">
+                <p id='headerText'>Fyll i på skalan hur väl påståendet stämmer</p>
+                <div class="row">
+                    <div class="question"></div>
+                    <div class="pointSystem"><img width="200px" src="/images/smiliePic.PNG"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Jag arbetade med intressanta frågeställningar</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Kursen kändes utmanande på ett stimulerande sätt</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Lärandemålen hjälpte mig att förstå vad jag förväntades kunna efter kursen</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Jag kunde lära mig av konkreta exempel som jag kunde relatera till</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Förståelse av centrala begrepp hade hög prioritet</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Kursens aktiviteter hjälpte mig att nå lärandemålen på ett effektivt sätt</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Jag kunde öva och få feedback utan att någon betygsättning gjordes</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Kursens examination kändes ärlig och rättvis</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+                <div class="row">
+                    <div class="question">Mina tidigare kunskaper var tillräckliga för att följa kursen</div>
+                    <div class="pointSystem"><input type="range" min="1" max="5" value="1" class="slider" id="myRange"></div>
+                </div>
+            </div>
+            <div id="bStart" class="startButton" onclick="start()">START</div>
+            <div id="bDone" class="startButton" onclick="stop()">KLAR</div>
+            <div id="time"></div>
+            <form id="sendInfo" action="/sendTime" method="POST" style="display: none;">
+                <input type="text" name="type" value="smilie">
+                <input id="timeToSend" type="text" name="time">
+            </form>
+        </div>
+        <script src="/javascripts/scripts.js"></script>
+    </body>
+</html>

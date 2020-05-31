@@ -1,0 +1,88 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#mainBox {
+    width: 900px;
+    height: 40px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#bDone {
+    text-align: center;
+}
+
+#headerText {
+    font-size: 22px;
+}
+
+#disclaimerText {
+    text-align: center;
+}
+
+#surveyWrapper {
+    padding-bottom: 10px;
+}
+
+#time {
+    font-size: 40px;
+    display: none;
+}
+
+.startButton {
+    margin-top: 40px;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #6d6875;
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+.startButton:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+.row {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.question {
+    width: 100%;
+    float: left;
+}
+
+
+.pointSystem {
+    width: 100%;
+    float: right;
+}
+
+.radioB {
+    margin-right: 16px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.radioT {
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 7px;
+    margin-right: 17px;
+    padding-left: 7px;
+}
+

@@ -1,0 +1,265 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Course Evaluation</title>
+
+        <link id="cssLink" rel="stylesheet" href="/stylesheets/style.css">
+
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <div id="headerBox">
+                <span id="cssText" class="darkModeText" onclick="changeCSS()">Dark mode</span>
+                <span id="langaugeText" class="darkModeText" onclick="toSwedish()">På Svenska</span>
+            </div>
+            <form id="survey">
+                <div id="surveyWrapper">
+                    <p id='headerText'>Grade the accuracy of the statement on the given scale</p>
+                    <p id="disclaimerText">All answers are anonymous!</p>
+                    <p id="disclaimerText">1 = I totally disagree <span style="display:inline-block; width:80px;"></span> 5 = I totally agree</p>
+                    
+                    <div id="pointQuestions">
+                        <div class="row">
+                            <div class="question"></div>
+                            <div class="pointSystem">
+                                <span class="radioT">1</span>
+                                <span class="radioT">2</span>
+                                <span class="radioT">3</span>
+                                <span class="radioT">4</span>
+                                <span class="radioT">5</span>
+                            </div>
+                        </div>
+                        <div class="row" id="r1">
+                            <div class="question">I worked with interesting issues</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q1" class="radioB" onclick="clearMarkOfRow('r1')">
+                                <input type="radio" name="q1" class="radioB" onclick="clearMarkOfRow('r1')">
+                                <input type="radio" name="q1" class="radioB" onclick="clearMarkOfRow('r1')">
+                                <input type="radio" name="q1" class="radioB" onclick="clearMarkOfRow('r1')">
+                                <input type="radio" name="q1" class="radioB" onclick="clearMarkOfRow('r1')">
+                            </div>
+                        </div>
+                        <div class="row" id="r2">
+                            <div class="question">The course was challenging in a stimulating way</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q2" class="radioB" onclick="clearMarkOfRow('r2')">
+                                <input type="radio" name="q2" class="radioB" onclick="clearMarkOfRow('r2')">
+                                <input type="radio" name="q2" class="radioB" onclick="clearMarkOfRow('r2')">
+                                <input type="radio" name="q2" class="radioB" onclick="clearMarkOfRow('r2')">
+                                <input type="radio" name="q2" class="radioB" onclick="clearMarkOfRow('r2')">
+                            </div>
+                        </div>
+                        <div class="row" id="r3">
+                            <div class="question">The intended learning outcomes helped me to understand what I was expected to achieve</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q3" class="radioB" onclick="clearMarkOfRow('r3')">
+                                <input type="radio" name="q3" class="radioB" onclick="clearMarkOfRow('r3')">
+                                <input type="radio" name="q3" class="radioB" onclick="clearMarkOfRow('r3')">
+                                <input type="radio" name="q3" class="radioB" onclick="clearMarkOfRow('r3')">
+                                <input type="radio" name="q3" class="radioB" onclick="clearMarkOfRow('r3')">
+                            </div>                
+                        </div>
+                        <div class="row" id="r4">
+                            <div class="question">I was able to learn from concrete examples that I could to relate to</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q4" class="radioB" onclick="clearMarkOfRow('r4')">
+                                <input type="radio" name="q4" class="radioB" onclick="clearMarkOfRow('r4')">
+                                <input type="radio" name="q4" class="radioB" onclick="clearMarkOfRow('r4')">
+                                <input type="radio" name="q4" class="radioB" onclick="clearMarkOfRow('r4')">
+                                <input type="radio" name="q4" class="radioB" onclick="clearMarkOfRow('r4')">
+                            </div>
+                        </div>
+                        <div class="row" id="r5">
+                            <div class="question">Understanding of key concepts had high priority</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q5" class="radioB" onclick="clearMarkOfRow('r5')">
+                                <input type="radio" name="q5" class="radioB" onclick="clearMarkOfRow('r5')">
+                                <input type="radio" name="q5" class="radioB" onclick="clearMarkOfRow('r5')">
+                                <input type="radio" name="q5" class="radioB" onclick="clearMarkOfRow('r5')">
+                                <input type="radio" name="q5" class="radioB" onclick="clearMarkOfRow('r5')">
+                            </div>                
+                        </div>
+                        <div class="row" id="r6">
+                            <div class="question">The course activities helped me to achieve the intended learning outcomes efficiently</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q6" class="radioB" onclick="clearMarkOfRow('r6')">
+                                <input type="radio" name="q6" class="radioB" onclick="clearMarkOfRow('r6')">
+                                <input type="radio" name="q6" class="radioB" onclick="clearMarkOfRow('r6')">
+                                <input type="radio" name="q6" class="radioB" onclick="clearMarkOfRow('r6')">
+                                <input type="radio" name="q6" class="radioB" onclick="clearMarkOfRow('r6')">
+                            </div>
+                        </div>
+                        <div class="row" id="r7">
+                            <div class="question">I was able to practice and receive feedback without being graded</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q7" class="radioB" onclick="clearMarkOfRow('r7')">
+                                <input type="radio" name="q7" class="radioB" onclick="clearMarkOfRow('r7')">
+                                <input type="radio" name="q7" class="radioB" onclick="clearMarkOfRow('r7')">
+                                <input type="radio" name="q7" class="radioB" onclick="clearMarkOfRow('r7')">
+                                <input type="radio" name="q7" class="radioB" onclick="clearMarkOfRow('r7')">
+                            </div>
+                        </div>
+                        <div class="row" id="r8">
+                            <div class="question">The assessment on the course was fair and honest</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q8" class="radioB" onclick="clearMarkOfRow('r8')">
+                                <input type="radio" name="q8" class="radioB" onclick="clearMarkOfRow('r8')">
+                                <input type="radio" name="q8" class="radioB" onclick="clearMarkOfRow('r8')">
+                                <input type="radio" name="q8" class="radioB" onclick="clearMarkOfRow('r8')">
+                                <input type="radio" name="q8" class="radioB" onclick="clearMarkOfRow('r8')">
+                            </div>                
+                        </div>
+                        <div class="row" id="r9">
+                            <div class="question">My background knowledge was sufficient to follow the course</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q9" class="radioB" onclick="clearMarkOfRow('r9')">
+                                <input type="radio" name="q9" class="radioB" onclick="clearMarkOfRow('r9')">
+                                <input type="radio" name="q9" class="radioB" onclick="clearMarkOfRow('r9')">
+                                <input type="radio" name="q9" class="radioB" onclick="clearMarkOfRow('r9')">
+                                <input type="radio" name="q9" class="radioB" onclick="clearMarkOfRow('r9')">
+                            </div>                
+                        </div>
+                        <div class="row" id="r10">
+                            <div class="question">The course activities enabled me to learn in different ways</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q10" class="radioB" onclick="clearMarkOfRow('r10')">
+                                <input type="radio" name="q10" class="radioB" onclick="clearMarkOfRow('r10')">
+                                <input type="radio" name="q10" class="radioB" onclick="clearMarkOfRow('r10')">
+                                <input type="radio" name="q10" class="radioB" onclick="clearMarkOfRow('r10')">
+                                <input type="radio" name="q10" class="radioB" onclick="clearMarkOfRow('r10')">
+                            </div>                
+                        </div>
+                        <div class="row" id="r11">
+                            <div class="question">I was able to learn by collaborating and discussing with others</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q11" class="radioB" onclick="clearMarkOfRow('r11')">
+                                <input type="radio" name="q11" class="radioB" onclick="clearMarkOfRow('r11')">
+                                <input type="radio" name="q11" class="radioB" onclick="clearMarkOfRow('r11')">
+                                <input type="radio" name="q11" class="radioB" onclick="clearMarkOfRow('r11')">
+                                <input type="radio" name="q11" class="radioB" onclick="clearMarkOfRow('r11')">
+                            </div>                
+                        </div>
+                        <div class="row" id="r12">
+                            <div class="question">I was able to get support if I needed it</div>
+                            <div class="pointSystem">
+                                <input type="radio" name="q12" class="radioB" onclick="clearMarkOfRow('r12')">
+                                <input type="radio" name="q12" class="radioB" onclick="clearMarkOfRow('r12')">
+                                <input type="radio" name="q12" class="radioB" onclick="clearMarkOfRow('r12')">
+                                <input type="radio" name="q12" class="radioB" onclick="clearMarkOfRow('r12')">
+                                <input type="radio" name="q12" class="radioB" onclick="clearMarkOfRow('r12')">
+                            </div>                
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="textQuestions">
+                    <div class="rowTQ">
+                        <div class="questionText">What was the best aspect of the course?</div>
+                        <input type="text" id="tQ1" name="textQuestion" class="textInput" placeholder="(Optional) Your answer..">       
+                    </div>
+                    <div class="rowTQ">
+                        <div class="questionText">What would you suggest to improve?</div>
+                        <input type="text" id="tQ1" name="textQuestion" class="textInput" placeholder="(Optional) Your answer..">       
+                    </div>
+                    <div class="rowTQ">
+                        <div class="questionText">What advice would you like to give to future participants?</div>
+                        <input type="text" id="tQ1" name="textQuestion" class="textInput" placeholder="(Optional) Your answer..">       
+                    </div>
+                    <div class="rowTQ">
+                        <div class="questionText">Is there anything else you would like to add?</div>
+                        <input type="text" id="tQ1" name="textQuestion" class="textInput" placeholder="(Optional) Your answer..">       
+                    </div>
+                </div>
+                
+                <div id="profileBox">
+                    <div class="rowProfile">
+                        <div class="rWrap" id="r13" onclick="clearMarkOfRow('r13')">
+                            <div class="questionProfile">I am:</div>
+                            <div class="optionButtons">
+                                <div class="rowP">
+                                    <input type="radio" name="q13" class="radioOB">
+                                    <label class="textOption">Female</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q13" class="radioOB">
+                                    <label class="textOption">Male</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q13" class="radioOB">
+                                    <label class="textOption">Other</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q13" class="radioOB">
+                                    <label class="textOption">Do not want to disclose</label>
+                                </div>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="rowProfile">
+                        <div class="rWrap" id="r14" onclick="clearMarkOfRow('r14')">
+                            <div class="questionProfile">I am:</div>
+                            <div class="optionButtons">
+                                <div class="rowP">
+                                    <input type="radio" name="q14" class="radioOB">
+                                    <label class="textOption">International Master’s student</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q14" class="radioOB">
+                                    <label class="textOption">International exchange student</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q14" class="radioOB">
+                                    <label class="textOption">Swedish student in year 1-3</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q14" class="radioOB">
+                                    <label class="textOption">Swedish student in year 4-5</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q14" class="radioOB">
+                                    <label class="textOption">Other type of student</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q14" class="radioOB">
+                                    <label class="textOption">Do not want to disclose</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowProfileExtra">
+                        <div class="rWrap" id="r15" onclick="clearMarkOfRow('r15')">
+                            <div class="questionProfile">I have some form of disability:</div>
+                            <div class="optionButtons">
+                                <div class="rowP">
+                                    <input type="radio" name="q15" class="radioOB">
+                                    <label class="textOption">Yes</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q15" class="radioOB">
+                                    <label class="textOption">No</label>
+                                </div>
+                                <div class="rowP">
+                                    <input type="radio" name="q15" class="radioOB">
+                                    <label class="textOption">Do not want to disclose</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- <div id="bStart" class="startButton" onclick="start()">START</div>
+            <div id="bDone" class="startButton" onclick="stop()">KLAR</div>
+            <div id="time"></div> -->
+            <div id="bDone" class="startButton" onclick="radioValidatorColor()">DONE ✓</div>
+            <form id="sendInfo" action="/sendTime" method="POST" style="display: none;">
+                <input type="text" name="type" value="radio">
+                <input id="timeToSend" type="text" name="time">
+            </form>
+        </div>
+        <script src="/javascripts/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Course Evaluation</title>
+
+        <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <div id="surveyWrapper">
+                <p id='headerText'>Fyll i på skalan hur väl påståendet stämmer</p>
+                <p id="disclaimerText">1 = Stämmer inte alls <span style="display:inline-block; width:80px;"></span> 5 = Stämmer perfekt</p>
+                <div class="row">
+                    <div class="question2">Jag arbetade med intressanta frågeställningar</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Kursen kändes utmanande på ett stimulerande sätt</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Lärandemålen hjälpte mig att förstå vad jag förväntades kunna efter kursen</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Jag kunde lära mig av konkreta exempel som jag kunde relatera till</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Förståelse av centrala begrepp hade hög prioritet</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Kursens aktiviteter hjälpte mig att nå lärandemålen på ett effektivt sätt</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Jag kunde öva och få feedback utan att någon betygsättning gjordes</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Kursens examination kändes ärlig och rättvis</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question2">Mina tidigare kunskaper var tillräckliga för att följa kursen</div>
+                    <div class="pointSystem">
+
+                        <div class="selectdiv">
+                            <label>
+                                <select>
+                                    <option selected> Välj </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </label>
+                          </div>
+
+                    </div>
+                </div>
+            
+            </div>
+            <div id="bStart" class="startButton" onclick="start()">START</div>
+            <div id="bDone" class="startButton" onclick="stop()">KLAR</div>
+            <div id="time"></div>
+            <form id="sendInfo" action="/sendTime" method="POST" style="display: none;">
+                <input type="text" name="type" value="dropdown">
+                <input id="timeToSend" type="text" name="time">
+            </form>
+        </div>
+        <script src="/javascripts/scripts.js"></script>
+    </body>
+</html>
